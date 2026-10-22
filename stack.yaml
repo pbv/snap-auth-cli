@@ -1,8 +1,15 @@
-resolver: lts-10.9
-pvp-bounds: upper
+packages:
+- '.'
+- '../snaplet-sqlite-simple'
+
+resolver: lts-24.50
+allow-newer: true 
+
 extra-deps:
-- aeson-1.1.2.0
-- heist-1.0.1.0
-- map-syntax-0.2.0.2
-- snap-1.0.0.2
-- snaplet-sqlite-simple-1.0.0.2
+- map-syntax-0.3
+- snap-1.1.3.3
+- snap-server-1.1.2.1
+
+
+ghc-options:
+    "$everything": -split-sections
